@@ -1,5 +1,4 @@
 
-
 body {
   margin: 0;
   font-family: 'Orbitron', sans-serif;
@@ -25,178 +24,117 @@ body::before {
   opacity: 0.5; 
 }
 
-header {
-  background-color: rgba(0, 0, 0, 0.8);
-  padding: 20px;
-  text-align: center;
+
+.main-header {
+  background-color: rgba(0, 0, 0, 0.447);
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   border-bottom: 2px solid #39ff14;
-  backdrop-filter: blur(8px);
-  box-shadow: 0 0 20px rgba(57, 255, 20, 0.2);
+  box-shadow: 0 0 10px rgba(57, 255, 20, 0.2);
 }
-
-header h1 {
-  font-size: 2.2rem;
-  margin: 0;
-  color: #39ff14;
-}
-
 .tagline {
   font-size: 0.9rem;
   color: #ccc;
-  margin-top: 5px;
+  margin-left: 75px;
+  margin-bottom: 20px;
+}
+.logo {
+  font-size: 2.5rem;
+  color: #39ff14;
 }
 
-nav {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin-top: 10px;
-}
-
-nav a {
+.main-nav a {
   color: #e0ffe0;
   text-decoration: none;
+  margin-left: 25px;
   font-weight: bold;
-  transition: color 0.3s;
-  padding: 5px 10px;
+  font-size: 1rem;
+  transition: color 0.3s ease;
 }
 
-nav a:hover {
+.main-nav a:hover {
   color: #00ffcc;
 }
 
-main {
-  padding: 20px;
-  /* backdrop-filter: blur(4px); */
+.hero-section {
+  display: flex;
+  align-items: center;
+  padding: 60px 40px;
+  min-height: 90vh;
+  color: #f0fdf0;
+  margin-bottom: 20px;
 }
 
-.intro {
-  background: rgba(255, 255, 255, 0.05);
-  padding: 15px;
+.hero-text {
+  max-width: 50%;
+  margin-left: 80px;
+  margin-bottom: 140px;
+  /* border: 0.1px solid #e0ffe0; */
+  box-shadow: 0 0 10px #e0ffe0;
+  padding: 35px;
   border-radius: 10px;
-  margin-bottom: 20px;
-  box-shadow: 0 0 10px rgba(57, 255, 20, 0.1);
+  backdrop-filter: blur(4px);
+  
 }
 
-button#filterBtn {
+.hero-text h2 {
+  font-size: 3.2rem;
+  margin-bottom: 20px;
+  color: #ccffcc;
+}
+
+.hero-text p {
+  font-size: 1.2rem;
+  color: #c2f5c2;
+  margin-bottom: 30px;
+}
+
+.cta-button {
+  display: inline-block;
   background-color: #39ff14;
-  border: none;
-  padding: 10px 20px;
-  font-weight: bold;
   color: #000;
-  cursor: pointer;
-  border-radius: 5px;
-  margin-bottom: 20px;
-  transition: 0.3s ease;
+  padding: 12px 30px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1rem;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-button#filterBtn:hover {
+.cta-button:hover {
   background-color: #00ffcc;
   transform: scale(1.05);
 }
 
-.table-container {
-  background: rgba(255, 255, 255, 0.03);
-  padding: 10px;
-  border-radius: 10px;
-  overflow-x: auto;
-}
-
-table {
-  width: 100%;
-  border-collapse: collapse;
-  background-color: rgba(17, 17, 17, 0.055);
-  box-shadow: 0 0 10px #39ff14;
-  backdrop-filter: blur(6px);
-  border-radius: 10px;
-  overflow: hidden;
-  min-width: 600px;
-  
-}
-.result-table{
-  background-color: rgba(17, 17, 17, 0.055);
-}
-
-table th, table td {
-  
-  border: 1px solid #39ff14;
-  padding: 8px 12px;
-  text-align: center;
-  font-size: 0.9rem;
-}
-
-table th {
-  background-color: #111;
-  color: #00ffcc;
-}
-
-.result-table td:last-child {
-  font-weight: bold;
-}
-
-.result-table td:last-child::before {
-  content: '✅';
-  margin-right: 5px;
-  color: #39ff14;
-}
-
-#longTable td:last-child {
-  
-  color: #00ff00;
-}
-
-#shortTable td:last-child {
-  color: #ff0000;
-}
 
 footer {
   text-align: center;
   padding: 20px;
-  border-top: 2px solid #39ff14;
-  background-color: #0000001d;
+  background-color: rgba(0, 0, 0, 0.447);
   color: #39ff14;
+  border-top: 2px solid #39ff14;
 }
 
-
 @media (max-width: 768px) {
-  main {
-    padding: 10px;
+  .hero-section {
+    flex-direction: column;
+    text-align: center;
+    padding: 40px 20px;
   }
 
-  table {
-    font-size: 0.75rem;
-    min-width: unset;
+  .hero-text {
+    max-width: 100%;
+    margin-left: 0;
   }
 
-  table th, table td {
-    padding: 6px;
-    font-size: 0.75rem;
+  .main-header {
+    flex-direction: column;
+    gap: 15px;
   }
 
-  header h1 {
-    font-size: 1.6rem;
-  }
-
-  .tagline {
-    font-size: 0.8rem;
-  }
-
-  nav a {
-    margin: 0 5px;
-    font-size: 0.85rem;
-  }
-
-  .intro {
-    font-size: 0.85rem;
-  }
-
-  button#filterBtn {
-    font-size: 0.85rem;
-    padding: 8px 15px;
-  }
-
-  .table-container {
-    overflow-x: auto;
+  .main-nav a {
+    margin: 10px;
   }
 }
