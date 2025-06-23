@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="StockRadar - beginner-friendly stock screener with dummy data based on price movement and financials.">
+    <title>StockRadar</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+<header class="main-header">
+    <h1>📡StockRadar</h1>
+    <p class="tagline">We Look, You Leap</p>
+    <nav class="main-nav">
+      <a href="homepage.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="intro">
+      <p>Your smart edge in stock screening. Instantly spot bullish and bearish setups based on weekly price action, volume trends, and core valuation metrics.</p>
+    </section>
+
+    <section class="table-container">
+      <button id="filterBtn">🔍 Filter Long/Short</button>
+      <table id="stockTable">
+        <thead>
+          <tr>
+            <th>Stock Name</th>
+            <th>Sector</th>
+            <th>Market Cap (Cr)</th>
+            <th>Current Price</th>
+            <th>P/B Ratio</th>
+            <th>D/E Ratio</th>
+          </tr>
+        </thead>
+        <tbody id="stockBody">
+          
+        </tbody>
+      </table>
+    </section>
+
+    <section id="filteredResults">
+      <h2>📈 Long Opportunities</h2>
+      <table class="result-table" id="longTable">
+        <thead>
+          <tr><th>Stock</th><th>Sector</th><th>Price</th><th>Change (% Weekly) </th><th>Buy/Sell</th></tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+
+      <h2>📉 Short Opportunities</h2>
+      <table class="result-table" id="shortTable">
+        <thead>
+          <tr><th>Stock</th><th>Sector</th><th>Price</th><th>Change (% Weekly)</th><th>Buy/Sell</th></tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 StockRadar. Made with love for traders.</p>
+  </footer>
+
+  <script src="data.js"></script>
+  <script src="logic.js"></script>
+</body>
+
+</html>

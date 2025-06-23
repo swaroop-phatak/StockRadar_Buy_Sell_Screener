@@ -1,0 +1,140 @@
+
+body {
+  margin: 0;
+  font-family: 'Orbitron', sans-serif;
+  background-color: #0b0b0b;
+  color: #e0ffe0;
+  position: relative;
+  min-height: 100vh;
+}
+
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('images/Bg_img.svg'); 
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: -1;
+  opacity: 0.5; 
+}
+
+
+.main-header {
+  background-color: rgba(0, 0, 0, 0.447);
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid #39ff14;
+  box-shadow: 0 0 10px rgba(57, 255, 20, 0.2);
+}
+.tagline {
+  font-size: 0.9rem;
+  color: #ccc;
+  margin-left: 75px;
+  margin-bottom: 20px;
+}
+.logo {
+  font-size: 2.5rem;
+  color: #39ff14;
+}
+
+.main-nav a {
+  color: #e0ffe0;
+  text-decoration: none;
+  margin-left: 25px;
+  font-weight: bold;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.main-nav a:hover {
+  color: #00ffcc;
+}
+
+.hero-section {
+  display: flex;
+  align-items: center;
+  padding: 60px 40px;
+  min-height: 90vh;
+  color: #f0fdf0;
+  margin-bottom: 20px;
+}
+
+.hero-text {
+  max-width: 50%;
+  margin-left: 80px;
+  margin-bottom: 140px;
+  /* border: 0.1px solid #e0ffe0; */
+  box-shadow: 0 0 10px #e0ffe0;
+  padding: 35px;
+  border-radius: 10px;
+  backdrop-filter: blur(4px);
+  
+}
+
+.hero-text h2 {
+  font-size: 3.2rem;
+  margin-bottom: 20px;
+  color: #ccffcc;
+}
+
+.hero-text p {
+  font-size: 1.2rem;
+  color: #c2f5c2;
+  margin-bottom: 30px;
+}
+
+.cta-button {
+  display: inline-block;
+  background-color: #39ff14;
+  color: #000;
+  padding: 12px 30px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1rem;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #00ffcc;
+  transform: scale(1.05);
+}
+
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.447);
+  color: #39ff14;
+  border-top: 2px solid #39ff14;
+}
+
+@media (max-width: 768px) {
+  .hero-section {
+    flex-direction: column;
+    text-align: center;
+    padding: 40px 20px;
+  }
+
+  .hero-text {
+    max-width: 100%;
+    margin-left: 0;
+  }
+
+  .main-header {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .main-nav a {
+    margin: 10px;
+  }
+}

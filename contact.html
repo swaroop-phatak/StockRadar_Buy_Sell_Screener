@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="contact.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header class="main-header">
+        <div>
+            <h1 class="Contact">🔗Contact Us</h1>
+            <nav class="main-nav">
+
+                <a href="homepage.html">Home</a>
+                <a href="index.html">Services</a>
+                <a href="about.html">About</a>
+
+            </nav>
+        </div>
+    </header>
+
+    <section class="main-sec">
+        <div class="main-div">
+            <h2>💬 Got a question, suggestion, or just want to say hey?</h2>
+            <p>We're always tuned in. Whether it's feedback, collaboration, or curiosity —
+                shoot us a message anytime and we’ll get back faster than a breakout stock. 🚀</p>
+            <h2>📧 Email</h2>
+            
+            <p id="emailText" onclick="copyEmail()" style="cursor:pointer; color:#39ff14;">
+                swaroopphatak07@gmail.com
+            </p>
+            <small id="copyMsg" style="color:#00ffcc; display:none;">📋 Copied to clipboard!</small>
+
+            <h2>👨‍💻 GitHub</h2>
+            <p><a href="https://github.com/swaroop-phatak">swaroop-phatak</a></p>
+        </div>
+    </section>
+
+    <footer>
+
+        <p>&copy; 2025 StockRadar. Made with love for traders.</p>
+    </footer>
+
+    <script>
+        function copyEmail() {
+            navigator.clipboard.writeText('swaroopphatak07@gmail.com');
+            document.getElementById('copyMsg').style.display = 'inline';
+            setTimeout(() => {
+                document.getElementById('copyMsg').style.display = 'none';
+            }, 2000);
+        }
+    </script>
+
+
+</body>
+
+</html>
