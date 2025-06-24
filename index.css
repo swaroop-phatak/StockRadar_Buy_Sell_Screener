@@ -86,7 +86,8 @@ body::before {
 }
 
 .hero-text p {
-  font-size: 1.2rem;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 1.5rem;
   color: #c2f5c2;
   margin-bottom: 30px;
 }

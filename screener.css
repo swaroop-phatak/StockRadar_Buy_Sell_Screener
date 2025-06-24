@@ -79,6 +79,11 @@ main {
   box-shadow: 0 0 10px rgba(57, 255, 20, 0.1);
 }
 
+.intro p{
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 1.2rem;
+}
+
 button#filterBtn {
   background-color: #39ff14;
   border: none;
@@ -124,6 +129,10 @@ table th, table td {
   padding: 8px 12px;
   text-align: center;
   font-size: 0.9rem;
+}
+tbody{
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 2.5rem;
 }
 
 table th {

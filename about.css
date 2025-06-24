@@ -84,9 +84,10 @@ footer {
 }
 
 .main-div p{
-    font-size: 1.2rem;
+  font-size: 1.2rem;
   color: #c2f5c2;
   margin-bottom: 30px;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 @media (max-width: 768px) {
   .main-sec {
@@ -107,7 +108,7 @@ footer {
   }
 
   .main-nav a {
-    margin: 10px 0;
-    display: inline-block;
+    margin: 15px ;
+   
   }
 }
