@@ -43,10 +43,12 @@ function filterStocks() {
       shortBody.innerHTML += rowHTML;
     }
   });
+  document.getElementById("filteredResults").scrollIntoView({ behavior: "smooth" });
 }
 
 
 document.addEventListener("DOMContentLoaded", () => {
   populateStockTable();
   document.getElementById("filterBtn").addEventListener("click", filterStocks);
+  
 });
