@@ -4,37 +4,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="StockRadar - Real-time stock screener with live NSE data for buy/sell signals.">
-    <title>StockRadar - Live Stock Screener</title>
+    <meta name="description" content="StockRadar - beginner-friendly stock screener with dummy data based on price movement and financials.">
+    <title>StockRadar</title>
     <link rel="stylesheet" href="screener.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
-    <style>
-        .positive { color: #00ff00; font-weight: bold; }
-        .negative { color: #ff4444; font-weight: bold; }
-        .buy-signal { color: #00ff00; font-weight: bold; }
-        .sell-signal { color: #ff4444; font-weight: bold; }
-        .loading { opacity: 0.6; }
-        .refresh-info {
-            text-align: center;
-            margin: 10px 0;
-            font-size: 0.9em;
-            color: #666;
-        }
-        .data-status {
-            background: #f0f8ff;
-            padding: 10px;
-            border-radius: 5px;
-            margin: 10px 0;
-            text-align: center;
-        }
-    </style>
 </head>
 
 <body>
 <header class="main-header">
     <h1>📡StockRadar</h1>
-    <p class="tagline">We Look, You Leap - Now with LIVE Data!</p>
+    <p class="tagline">We Look, You Leap</p>
     <nav class="main-nav">
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
@@ -44,20 +24,11 @@
 
   <main>
     <section class="intro">
-      <p>Your smart edge in stock screening with <strong>REAL-TIME NSE data</strong>. Instantly spot bullish and bearish setups based on live price action, volume trends, and technical indicators.</p>
-      <div class="data-status">
-        <strong>🔴 LIVE DATA:</strong> Real-time prices from NSE • Auto-refresh every 5 minutes • Technical indicators included
-      </div>
+      <p>Your smart edge in stock screening. Instantly spot bullish and bearish setups based on weekly price action, volume trends, and core valuation metrics.</p>
     </section>
 
     <section class="table-container">
-      <div style="text-align: center; margin-bottom: 15px;">
-        <button id="filterBtn">🔍 Filter Long/Short</button>
-      </div>
-      <div class="refresh-info">
-        📊 Showing live data from top NSE stocks • Last updated: <span id="lastUpdate">Loading...</span>
-      </div>
-      
+      <button id="filterBtn">🔍 Filter Long/Short</button>
       <table id="stockTable">
         <thead>
           <tr>
@@ -70,58 +41,36 @@
           </tr>
         </thead>
         <tbody id="stockBody">
-          <tr>
-            <td colspan="6" style="text-align: center; padding: 20px;">
-              🔄 Loading real stock data...
-            </td>
-          </tr>
+          
         </tbody>
       </table>
     </section>
 
     <section id="filteredResults">
-      <h2>📈 Long Opportunities (0)</h2>
+      <h2>📈 Long Opportunities</h2>
       <table class="result-table" id="longTable">
         <thead>
-          <tr><th>Stock</th><th>Sector</th><th>Price</th><th>Change (% Weekly)</th><th>Signal</th></tr>
+          <tr><th>Stock</th><th>Sector</th><th>Price</th><th>Change (% Weekly) </th><th>Buy/Sell</th></tr>
         </thead>
         <tbody></tbody>
       </table>
 
-      <h2>📉 Short Opportunities (0)</h2>
+      <h2>📉 Short Opportunities</h2>
       <table class="result-table" id="shortTable">
         <thead>
-          <tr><th>Stock</th><th>Sector</th><th>Price</th><th>Change (% Weekly)</th><th>Signal</th></tr>
+          <tr><th>Stock</th><th>Sector</th><th>Price</th><th>Change (% Weekly)</th><th>Buy/Sell</th></tr>
         </thead>
-        <tbody></tbody>
+        <tbody ></tbody>
       </table>
-      
-      <div class="refresh-info">
-        <strong>Screening Criteria:</strong><br>
-        📈 <strong>Long (BUY):</strong> Weekly drop ≥5%, RSI <45, Price >EMA200, High Volume<br>
-        📉 <strong>Short (SELL):</strong> Weekly gain ≥10%, RSI >65, Price <EMA200, High Volume
-      </div>
     </section>
   </main>
 
   <footer>
-    <p>&copy; 2025 StockRadar. Made with ❤️ for traders. Now with LIVE NSE data!</p>
+    <p>&copy; 2025 StockRadar. Made with love for traders.</p>
   </footer>
 
-  <!-- Load API first, then logic -->
-  <script src="api.js"></script>
-  <script src="logic_new.js"></script>
-  
-  <script>
-    // Update last refresh time
-    function updateLastRefreshTime() {
-      document.getElementById('lastUpdate').textContent = new Date().toLocaleTimeString();
-    }
-    
-    // Update time initially and on data load
-    document.addEventListener('DOMContentLoaded', updateLastRefreshTime);
-    setInterval(updateLastRefreshTime, 60000); // Update every minute
-  </script>
+  <script src="data.js"></script>
+  <script src="logic.js"></script>
 </body>
 
 </html>
