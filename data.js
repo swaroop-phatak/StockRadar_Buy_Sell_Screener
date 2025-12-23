@@ -222,3 +222,24 @@ const stockData = [
     currentPrice: 650,
     priceWeekAgo: 640,
     marketCap: 560000,
+    pbRatio: 1.5,
+    deRatio: 1.8,
+    rsi: 57,
+    ema200: 600,
+    volume: 4100000,
+    volumeSMA20: 3900000
+  },
+  {
+    name: "Nestle India",
+    sector: "Food & Beverages",
+    currentPrice: 24000,
+    priceWeekAgo: 23800,
+    marketCap: 580000,
+    pbRatio: 40.2,
+    deRatio: 0.0,
+    rsi: 54,
+    ema200: 23500,
+    volume: 120000,
+    volumeSMA20: 130000
+  }
+];
